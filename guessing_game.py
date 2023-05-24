@@ -15,10 +15,6 @@ def start_game():
 
     while True:
         try:
-           
-            
-            
-            print(f"{number}")
             guess = int(input("enter a number between 1 and 100: "))   
             if guess < number:
                 print("To Low! Try again")
@@ -32,6 +28,7 @@ def start_game():
                 continue 
             else:
                 print("Well well well looks like you are smarter than you look. Until next time. Ridller out.\n") 
+                print ("The number you guessed was correct! the number was {} and it took you {} attempts.".format(number,attempts))
                 tries.append(attempts)
                 print("overall stats")
                 print(f"Mean: {mean(tries)}")
@@ -47,7 +44,7 @@ def start_game():
             print("Well well well you were supposed to guess a number. hmmm i am in a generous mood so guess again")
             continue 
     
-    print ("The number you guessed was correct! the number was {} and it took you {} attempts.".format(number,attempts))
+    
 start_game()
 
 
